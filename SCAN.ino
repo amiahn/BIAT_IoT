@@ -1,9 +1,9 @@
 #include <SoftwareSerial.h>
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
-#define WIFI_SSID "AndroidAPD85D"
-#define WIFI_PASSWORD "2710****"
-//const char *URL = "http://172.20.10.4:4000/Etiquette/listEtiquette";
+#define WIFI_SSID "WIFI name"
+#define WIFI_PASSWORD "your password"
+
 const char *URL = "http://192.168.111.206:4000/Etiquette/listEtiquette";
   bool test ;
 int err ; 
@@ -148,9 +148,9 @@ if (rfid.available()) {
   send_data();}
  
     else {if (test) {httpClient.begin(client, URL);
-    String data = "name="+String(""); // hedhi zedha f ajout etiquette 
+    String data = "name="+String(""); 
     httpClient.addHeader("Content-Type", "application/x-www-form-urlencoded");
-    httpClient.POST(data); // f scan nhot "" fergha 
+    httpClient.POST(data); 
    
     String content = httpClient.getString();
     httpClient.end();
