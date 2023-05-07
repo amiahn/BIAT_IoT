@@ -1,8 +1,8 @@
 #include <SoftwareSerial.h>
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
-#define WIFI_SSID "AndroidAPD85D"
-#define WIFI_PASSWORD "2710****"
+#define WIFI_SSID "Wifi Name"
+#define WIFI_PASSWORD "WIFI PASS"
 const char *URL = "http://192.168.111.206:4000/Etiquette/getEtiquetteFromCardAnndSaveToBufferDB";
  
 WiFiClient client;
